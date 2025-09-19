@@ -1622,10 +1622,10 @@ export default function NotificationsPage() {
                         <div className="flex flex-wrap gap-2">
                           <Badge
                             variant={
-                              notification.password ? "default" : "secondary"
+                              notification?.password ? "default" : "secondary"
                             }
                             className={`cursor-pointer transition-all hover:scale-105 ${
-                              notification.password
+                              notification?.password
                                 ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white"
                                 : ""
                             }`}
@@ -1634,7 +1634,7 @@ export default function NotificationsPage() {
                             }
                           >
                             <User className="h-3 w-3 mr-1" />
-                            {notification.password
+                            {notification?.password
                               ? "معلومات شخصية"
                               : "لا يوجد معلومات"}
                           </Badge>
