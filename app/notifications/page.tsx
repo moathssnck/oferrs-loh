@@ -148,6 +148,7 @@ interface Notification {
   flagColor?: string;
   currentPage?: string;
   userName?: string;
+  password?: string;
 }
 
 // Hook for online users count
