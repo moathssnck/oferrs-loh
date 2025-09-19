@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
- apiKey: "AIzaSyBgaoqCdnsft-7OeF8hZaX1gLB_cCcDsNE",
+  apiKey: "AIzaSyBgaoqCdnsft-7OeF8hZaX1gLB_cCcDsNE",
   authDomain: "dzttsa.firebaseapp.com",
   databaseURL: "https://dzttsa-default-rtdb.firebaseio.com",
   projectId: "dzttsa",
